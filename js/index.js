@@ -4,40 +4,46 @@ let btnDescript = document.querySelector('#btnDescriptografar');
 
 let txtInput;
 let inputArray = [];
+let inputResultado;
 
 btnCript.addEventListener('click', function (e) {
     txtInput = inputTraducao.value;
-    for (let i = 0; i < txtInput.length; i++) {
-        inputArray.push(txtInput.charAt(i));
-    }
 
-    for (let i = 0; i < inputArray.length; i++) {
-        switch (inputArray[i]) {
+    // v Não está funcionando, não sei o por que
+    for (let i = 0; i < txtInput.length; i++) {
+        switch (txtInput.charAt(i)) {
             case 'e': // e -> enter
-                inputArray[i] = "enter"
+                txtInput.replace(txtInput.charAt(i), "enter");
+                console.log("achou a letra  e");
             break;
 
             case 'i': // i -> imes
-                inputArray[i] = "imes"
+                txtInput.replace(txtInput.charAt(i), "imes");
+                console.log("achou a letra  i");
             break;
 
             case 'a': // a -> ai
-                inputArray[i] = "ai"
+                txtInput.replace(txtInput.charAt(i), "ai");
+                console.log("achou a letra  a");
             break;
             
             case 'o': // o -> ober
-                inputArray[i] = "ober"
+                txtInput.replace(txtInput.charAt(i), "ober");
+                console.log("achou a letra  o");
             break;
 
             case 'u': // u -> ufat
-                inputArray[i] = "ufat"
+                txtInput.replace(txtInput.charAt(i), "ufat");
+                console.log("achou a letra  u");
             break;
-        
+
             default:
+                console.log("testes")
             break;
         }
         
     }
 
     e.preventDefault();
+    console.log(txtInput);
 })
