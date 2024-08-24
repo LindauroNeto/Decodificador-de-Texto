@@ -3,8 +3,6 @@ let btnCript = document.querySelector('#btnCriptografar');
 let btnDescript = document.querySelector('#btnDescriptografar');
 
 let txtInput;
-let inputArray = [];
-let inputResultado;
 
 btnCript.addEventListener('click', function (e) {
     txtInput = inputTraducao.value;
@@ -18,4 +16,17 @@ btnCript.addEventListener('click', function (e) {
 
     e.preventDefault();
     return txtCriptografado;
+})
+
+btnDescript.addEventListener('click', function (e) {
+
+    let txtDescriptografado = txtCriptografado
+        .replaceAll('enter', 'e')
+        .replaceAll('ai', 'i')
+        .replaceAll('imes', 'i')
+        .replaceAll('ufat', 'u')
+        .replaceAll('ober', 'o');
+
+    e.preventDefault;
+    return txtDescriptografado;
 })
