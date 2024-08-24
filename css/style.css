@@ -52,18 +52,29 @@ body {
     outline: 0;
 }
 
-.resultado {
+.main_resultado {
     background-color: #fff;
     float: right;
-    height: 90%;
-    padding: 20% 2.5%;
+    height: 600px;
+    width: 400px;
     border-radius: 32px;
-    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.resultado {
+    padding: 20% 2.5%;
     row-gap: 32px;
+    text-align: center;
+}
+
+.resultado__unhidden {
+    padding: 2% 2% 32% 2%;
+    justify-content: flex-start;
+    font-size: 1.5rem;
+    text-align: left;
 }
 
 .resultado img {
