@@ -30,10 +30,10 @@ btnCript.addEventListener('click', function (e) {
 
     txtCriptografado = txtInput
     .replaceAll('e', 'enter')
-    .replaceAll('a', 'ai')
     .replaceAll('i', 'imes')
-    .replaceAll('u', 'ufat')
-    .replaceAll('o', 'ober');
+    .replaceAll('a', 'ai')
+    .replaceAll('o', 'ober')
+    .replaceAll('u', 'ufat');
 
     exibicaoDoResultado(txtCriptografado);
     e.preventDefault();
@@ -48,10 +48,10 @@ btnDescript.addEventListener('click', function (e) {
 
     txtDescriptografado = txtInput
     .replaceAll('enter', 'e')
-    .replaceAll('ai', 'a')
     .replaceAll('imes', 'i')
-    .replaceAll('ufat', 'u')
-    .replaceAll('ober', 'o');
+    .replaceAll('ai', 'a')
+    .replaceAll('ober', 'o')
+    .replaceAll('ufat', 'u');
 
     exibicaoDoResultado(txtDescriptografado);
     e.preventDefault();
