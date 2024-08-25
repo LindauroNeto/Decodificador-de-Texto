@@ -11,13 +11,22 @@ let txtInput;
 let txtCriptografado;
 let txtDescriptografado;
 
-btnCript.addEventListener('click', function (e) {
-    txtInput = inputTraducao.value;
-    
+function ocultarConteudo() {
     cxResultado.classList.remove('resultado');
     cxResultado.classList.add('resultado__unhidden');
     imgResult.style.display = 'none';
     titResult.style.display = 'none';
+}
+
+function exibicaoDoResultado(tipoTxt) {
+    txtResult.textContent = tipoTxt;
+    inputTraducao.value = '';
+}
+
+btnCript.addEventListener('click', function (e) {
+    txtInput = inputTraducao.value;
+    
+    ocultarConteudo();
 
     txtCriptografado = txtInput
     .replaceAll('e', 'enter')
@@ -26,8 +35,7 @@ btnCript.addEventListener('click', function (e) {
     .replaceAll('u', 'ufat')
     .replaceAll('o', 'ober');
 
-    txtResult.textContent = txtCriptografado;
-    inputTraducao.value = ''
+    exibicaoDoResultado(txtCriptografado);
     e.preventDefault();
 
     return txtCriptografado;
@@ -36,10 +44,7 @@ btnCript.addEventListener('click', function (e) {
 btnDescript.addEventListener('click', function (e) {
     txtInput = inputTraducao.value;
 
-    cxResultado.classList.remove('resultado');
-    cxResultado.classList.add('resultado__unhidden');
-    imgResult.style.display = 'none';
-    titResult.style.display = 'none';
+    ocultarConteudo();
 
     txtDescriptografado = txtInput
     .replaceAll('enter', 'e')
@@ -48,8 +53,7 @@ btnDescript.addEventListener('click', function (e) {
     .replaceAll('ufat', 'u')
     .replaceAll('ober', 'o');
 
-    txtResult.textContent = txtDescriptografado;
-    inputTraducao.value = ''
+    exibicaoDoResultado(txtDescriptografado);
     e.preventDefault();
 
     return txtDescriptografado;
