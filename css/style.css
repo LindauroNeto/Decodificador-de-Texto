@@ -53,15 +53,17 @@ body {
 }
 
 .main_resultado {
+    box-sizing: border-box;
     background-color: #fff;
     float: right;
-    height: 600px;
-    width: 400px;
+    height: 80vmax;
+    width: 30vw;
     border-radius: 32px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .resultado {
@@ -89,6 +91,27 @@ body {
     gap: 16px;
 }
 
+.resultado__botao__main {
+    font-size: 1rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 80%;
+    text-decoration: none;
+    color: var(--dark-blue);
+    text-align: center;
+    border: 1px solid var(--dark-blue);
+    padding: 3% 2%;
+    margin-bottom: 5%;
+    border-radius: 24px;
+    position: absolute;
+    bottom: 0;
+}
+
+.resultado__botao {
+
+}
+
 .rodape {
     width: 100%;
     margin-top: 60%;
@@ -98,7 +121,7 @@ body {
     display: flex;
     gap: 8px;
     align-items: center;
-    margin-bottom: 8%;
+    margin-bottom: 5%;
 }
 
 .rodape__aviso__texto {
@@ -118,7 +141,7 @@ body {
     text-decoration: none;
     text-align: center;
     border: 1px solid var(--dark-blue);
-    padding: 5% 12%;
+    padding: 3% 12%;
     border-radius: 24px;
 }
 
