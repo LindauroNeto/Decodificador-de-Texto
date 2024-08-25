@@ -1,6 +1,7 @@
 let inputTraducao = document.querySelector('#inputTraducao');
 let btnCript = document.querySelector('#btnCriptografar');
 let btnDescript = document.querySelector('#btnDescriptografar');
+let btnCopiar = document.querySelector('#btnCopiar');
 
 let cxResultado = document.querySelector('#cxResultado');
 let imgResult = document.querySelector('#imagemResultado');
@@ -14,6 +15,8 @@ let txtDescriptografado;
 function ocultarConteudo() {
     cxResultado.classList.remove('resultado');
     cxResultado.classList.add('resultado__unhidden');
+    btnCopiar.classList.remove('resultado__botao');
+    btnCopiar.classList.add('resultado__botao__unhidden');
     imgResult.style.display = 'none';
     titResult.style.display = 'none';
 }
@@ -57,4 +60,9 @@ btnDescript.addEventListener('click', function (e) {
     e.preventDefault();
 
     return txtDescriptografado;
+})
+
+btnCopiar.addEventListener('click', function (e) {
+    navigator.clipboard.writeText(txtResult.textContent);
+    e.preventDefault();
 })
