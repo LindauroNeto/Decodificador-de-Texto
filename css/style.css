@@ -2,9 +2,11 @@
 
 :root {
     --light-blue: #F3F5FC;
+    --semi-light-blue: #D8DFE8;
+    --light-bluer: #AAB2D5;
     --dark-blue: #0A3871;
     --darker-blue: #072B61;
-    --semi-light-blue: #D8DFE8;
+    --darker-bluer: #052051;
 }
 
 * {
@@ -16,6 +18,7 @@ body {
     font-family: "Inter", sans-serif;
     box-sizing: border-box;
     background-color: var(--light-blue);
+    box-sizing: border-box;
     padding: 3%;
     display: flex;
     justify-content: space-between;
@@ -26,20 +29,23 @@ body {
     display: flex;
     flex-direction: column;
     width: 80%;
+    height: 80vmax;
 }
 
 .principal__traducao {
     margin-top: 10%;
     margin-left: 10%;
     width: 80%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 #inputTraducao {
-    font-size: 2rem;
-    border: none; /* 1px var(--dark-blue) solid; */
+    font-size: 1.8rem;
+    border: none;
     border-radius: 20px;
     background-color: var(--light-blue);
     width: 100%;
@@ -56,7 +62,7 @@ body {
     box-sizing: border-box;
     background-color: #fff;
     float: right;
-    height: 80vmax;
+    height: 78vmax;
     width: 30vw;
     border-radius: 32px;
     display: flex;
@@ -108,6 +114,14 @@ body {
     bottom: 0;
 }
 
+.resultado__botao__main:hover {
+    background-color: var(--semi-light-blue);
+}
+
+.resultado__botao__main:active {
+    background-color: var(--light-bluer);
+}
+
 .resultado__botao {
     display: none;
 }
@@ -118,14 +132,16 @@ body {
 
 .rodape {
     width: 100%;
-    margin-top: 60%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 5%;
 }
 
 .rodape__aviso {
     display: flex;
     gap: 8px;
     align-items: center;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
 }
 
 .rodape__aviso__texto {
@@ -158,10 +174,18 @@ body {
     background-color: var(--darker-blue);
 }
 
+.rodape__botoes #btnCriptografar:active {
+    background-color: var(--darker-bluer);
+}
+
 .rodape__botoes #btnDescriptografar {
     color: var(--dark-blue);
 }
 
 .rodape__botoes #btnDescriptografar:hover {
     background-color: var(--semi-light-blue);
+}
+
+.rodape__botoes #btnDescriptografar:active {
+    background-color: var(--light-bluer);
 }
